@@ -2,7 +2,7 @@
 #include <iostream>
 #include "account.h"
 #include "chequing_account.h"
-#include "customer.h"
+//#include "customer.h"
 
 
 
@@ -12,29 +12,29 @@ Chequing_Account::Chequing_Account() : Account()
 	ChequingType = true;
 }
 
-Chequing_Account::Chequing_Account(double balance, double fee, Customer owner, bool canwrite, double overdraft) : Account(balance, fee, owner)
+Chequing_Account::Chequing_Account(double& balance, double& fee, string& owner, bool& canwrite, double& overdraft) : Account(balance, fee, owner)
 {
 	can_write_cheques = canwrite;
 	overdraft_limit = overdraft;
 }
 
-void Chequing_Account::setAccountBalance(double balance)
+void Chequing_Account::setAccountBalance(double& balance)
 {
 	accountBalance = balance;
 }
-void Chequing_Account::setAccountFee(double fee)
+void Chequing_Account::setAccountFee(double& fee)
 {
 	accountFee = fee;
 }
-void Chequing_Account::setAccountOwner(Customer owner)
+void Chequing_Account::setAccountOwner(string& owner)
 {
 	accountOwner = owner;
 }
-void Chequing_Account::setCanWriteCheques(bool canwrite)
+void Chequing_Account::setCanWriteCheques(bool& canwrite)
 {
 	can_write_cheques = canwrite;
 }
-void Chequing_Account::setOverdraftLimit(double overdraft)
+void Chequing_Account::setOverdraftLimit(double& overdraft)
 {
 	overdraft_limit = overdraft;
 }
@@ -51,7 +51,7 @@ double Chequing_Account::getAccountFee()
 {
 	return accountFee;
 }
-Customer Chequing_Account::getAccountOwner()
+string Chequing_Account::getAccountOwner()
 {
 	return accountOwner;
 }

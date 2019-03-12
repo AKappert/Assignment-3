@@ -8,19 +8,19 @@ class Savings_Account : public Account
 {
 public:
 	Savings_Account();
-	Savings_Account(double, double, Customer, int, double);
+	Savings_Account(double&, double&, string&, int&, double&);
 	
-	void setAccountBalance(double);
-	void setAccountFee(double);
-	void setAccountOwner(Customer);
-	void setMaxTransactions(int);
-	void setInterestRate(double);
+	void setAccountBalance(double&);
+	void setAccountFee(double&);
+	void setAccountOwner(string&);
+	void setMaxTransactions(int&);
+	void setInterestRate(double&);
 
 
 	int getAccountNum();
 	double getAccountBalance();
 	double getAccountFee();
-	Customer getAccountOwner();
+	string getAccountOwner();
 	int getMaxTransactions();
 	double getInterestRate();
 

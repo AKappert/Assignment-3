@@ -2,7 +2,7 @@
 #include <iostream>
 #include "account.h"
 #include "savings_account.h"
-#include "customer.h"
+//#include "customer.h"
 
 
 Savings_Account::Savings_Account() : Account()
@@ -11,29 +11,29 @@ Savings_Account::Savings_Account() : Account()
 	ChequingType = false;
 }
 
-Savings_Account::Savings_Account(double balance, double fee, Customer owner, int maxtrans, double interestrate) : Account(balance, fee, owner)
+Savings_Account::Savings_Account(double& balance, double& fee, string& owner, int& maxtrans, double& interestrate) : Account(balance, fee, owner)
 {
 	max_transactions = maxtrans;
 	interest_rate = interestrate;
 }
 
-void Savings_Account::setAccountBalance(double balance)
+void Savings_Account::setAccountBalance(double& balance)
 {
 	accountBalance = balance;
 }
-void Savings_Account::setAccountFee(double fee)
+void Savings_Account::setAccountFee(double& fee)
 {
 	accountFee = fee;
 }
-void Savings_Account::setAccountOwner(Customer owner)
+void Savings_Account::setAccountOwner(string& owner)
 {
 	accountOwner = owner;
 }
-void Savings_Account::setMaxTransactions(int maxtrans)
+void Savings_Account::setMaxTransactions(int& maxtrans)
 {
 	max_transactions = maxtrans;
 }
-void Savings_Account::setInterestRate(double interestrate)
+void Savings_Account::setInterestRate(double& interestrate)
 {
 	interest_rate = interestrate;
 }
@@ -50,7 +50,7 @@ double Savings_Account::getAccountFee()
 {
 	return accountFee;
 }
-Customer Savings_Account::getAccountOwner()
+string Savings_Account::getAccountOwner()
 {
 	return accountOwner;
 }

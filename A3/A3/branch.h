@@ -1,7 +1,7 @@
 #pragma once
 
 
-
+using namespace std;
 
 class Branch
 {
@@ -43,4 +43,3 @@ private:
 
 	int numAccounts = 0;
 };
-
