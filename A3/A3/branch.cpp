@@ -1,11 +1,11 @@
 #include "pch.h"
 #include <iostream>
 #include <string>
-#include "branch.h"
+
 #include "account.h"
 #include "savings_account.h"
 #include "chequing_account.h"
-
+#include "branch.h"
 
 using namespace std;
 
@@ -95,7 +95,7 @@ void Branch::listCustomers()
 {
 	for (int i = 0; i < numAccounts; i++)
 	{
-		
+
 		branchAccounts[i].getAccountOwner();
 
 

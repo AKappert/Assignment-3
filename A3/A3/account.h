@@ -3,20 +3,22 @@
 
 using namespace std;
 
+//class Customer;
+
 class Account
 {
 public:
 	Account();
-	Account(double, double, Customer);
+	Account(double&, double&, string&);
 	
-	virtual void setAccountBalance(double) = 0;
-	virtual void setAccountFee(double) = 0;
-	virtual void setAccountOwner(Customer) = 0;
+	virtual void setAccountBalance(double&) = 0;
+	virtual void setAccountFee(double&) = 0;
+	virtual void setAccountOwner(string&) = 0;
 	
 	virtual int getAccountNum() = 0;
 	virtual double getAccountBalance() = 0;
 	virtual double getAccountFee() = 0;
-	virtual Customer getAccountOwner() = 0;
+	virtual string getAccountOwner() = 0;
 	
 	virtual bool isSavings() = 0;
 	virtual bool isChequing() = 0;
@@ -30,7 +32,7 @@ protected:
 
 	double accountBalance;
 	double accountFee;
-	Customer accountOwner;
+	string accountOwner;
 	
 	bool SavingsType;
 	bool ChequingType;

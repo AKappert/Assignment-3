@@ -1,9 +1,11 @@
 #include "pch.h"
 #include <iostream>
+#include <string>
+//#include "customer.h"
 #include "account.h"
 #include "savings_account.h"
 #include "chequing_account.h"
-//#include "customer.h"
+
 
 
 using namespace std;
@@ -18,10 +20,10 @@ Account::Account()
 
 	accountBalance = 0;
 	accountFee = 0;
-	accountOwner = Customer();
+	accountOwner = nullptr;
 }
 
-Account::Account(double balance, double fee, Customer owner)
+Account::Account(double& balance, double& fee, string& owner)
 {
 	accountNumber = accountcounter;
 	accountcounter++;
